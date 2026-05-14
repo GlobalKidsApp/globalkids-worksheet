@@ -2,6 +2,7 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>練字工作紙產生器 · Global Kids</title>
 <style>
   * { box-sizing: border-box; }
@@ -10,6 +11,59 @@
     font-family: "Helvetica Neue", "PingFang TC", "Microsoft JhengHei", sans-serif;
     background: #f3f4f6;
     color: #222;
+  }
+
+  /* ===== Mobile responsive ===== */
+  @media (max-width: 768px) {
+    #controls {
+      padding: 14px 16px !important;
+    }
+    #controls h1 {
+      font-size: 18px !important;
+    }
+    #controls h1 .sub {
+      display: block;
+      margin-left: 0 !important;
+      margin-top: 2px;
+      font-size: 12px;
+    }
+    .ctrl-row {
+      flex-direction: column;
+      gap: 14px !important;
+    }
+    .ctrl-row label.field {
+      min-width: 0 !important;
+      width: 100%;
+    }
+    .ctrl-row textarea {
+      width: 100% !important;
+      min-width: 0 !important;
+    }
+    .ctrl-row input[type="text"],
+    .ctrl-row select {
+      width: 100%;
+      min-width: 0 !important;
+    }
+    .ctrl-row input[type="number"] { width: 100px; }
+    .checks { max-width: none !important; }
+    .buttons { flex-wrap: wrap; width: 100%; }
+    .buttons button {
+      flex: 1;
+      min-width: 90px;
+      font-size: 13px;
+      padding: 11px 12px;
+    }
+    details {
+      min-width: 0 !important;
+    }
+    #worksheet-wrapper {
+      padding: 10px 0 !important;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .page {
+      flex-shrink: 0;
+    }
   }
   /* ===== Controls panel ===== */
   #controls {
